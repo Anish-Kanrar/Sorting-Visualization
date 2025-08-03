@@ -20,15 +20,6 @@ Welcome to the **Sorting Visualization** project – a dynamic, interactive tool
 
 ---
 
-## 📸 Screenshots
-
-> _Add screenshots here if you want to showcase your UI_  
-> For example:  
-> ![Demo GIF](demo.gif)  
-> _or_  
-> ![App Screenshot](screenshot.png)
-
----
 
 ## 🧠 How It Works
 
