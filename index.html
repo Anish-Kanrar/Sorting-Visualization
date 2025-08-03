@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sorting Algorithm Visualizer</h1>
+            <p>Watch algorithms sort data in real-time with beautiful animations</p>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label>Algorithm:</label>
+                <select id="algorithmSelect">
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="merge">Merge Sort</option>
+                    <option value="quick">Quick Sort</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label>Array Size:</label>
+                <input type="range" id="sizeSlider" min="10" max="100" value="50">
+                <span id="sizeValue">50</span>
+            </div>
+            
+            <div class="control-group">
+                <label>Speed:</label>
+                <input type="range" id="speedSlider" min="1" max="100" value="50">
+                <span id="speedValue">50</span>
+            </div>
+            
+            <button id="generateBtn">Generate New Array</button>
+            <button id="sortBtn">Start Sort</button>
+            <button id="stopBtn">Stop</button>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value" id="comparisons">0</div>
+                <div class="stat-label">Comparisons</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="swaps">0</div>
+                <div class="stat-label">Swaps</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="time">0ms</div>
+                <div class="stat-label">Time</div>
+            </div>
+        </div>
+
+        <div class="visualization-container" id="visualization">
+        </div>
+
+        <div class="algorithm-info">
+            <h3 id="algorithmName">Bubble Sort</h3>
+            <p id="algorithmDescription">Compares adjacent elements and swaps them if they're in wrong order.</p>
+            
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background: linear-gradient(180deg, #4fc3f7 0%, #0288d1 100%);"></div>
+                    <span>Unsorted</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: linear-gradient(180deg, #ff6b6b 0%, #e53935 100%);"></div>
+                    <span>Comparing</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: linear-gradient(180deg, #ffd93d 0%, #ff9800 100%);"></div>
+                    <span>Swapping</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: linear-gradient(180deg, #4caf50 0%, #388e3c 100%);"></div>
+                    <span>Sorted</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
